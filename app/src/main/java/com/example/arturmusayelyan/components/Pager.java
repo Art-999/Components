@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 public class Pager extends AppCompatActivity {
     //https://www.journaldev.com/10096/android-viewpager-example-tutorial
+    //http://www.viralandroid.com/2016/04/android-image-slider-tutorial.html
 
     private ViewPager pager;
 
