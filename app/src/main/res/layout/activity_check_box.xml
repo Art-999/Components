@@ -26,4 +26,6 @@
         android:text="With Milk"
         android:layout_below="@id/checkbox_1"
         android:layout_toRightOf="@id/checkbox_textView"/>
+
+
 </RelativeLayout>
