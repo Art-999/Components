@@ -2,6 +2,7 @@ package com.example.arturmusayelyan.components;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -18,26 +19,35 @@ public class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        return super.instantiateItem(container, position);
+        ModelObject modelObject = ModelObject.values()[position];
+        LayoutInflater inflater = LayoutInflater.from(context);
+        ViewGroup layout = (ViewGroup) inflater.inflate(modelObject.getLayoutId(), null);
+        container.addView(layout);
+        return layout;
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
-        super.destroyItem(container, position, object);
+    public void destroyItem(ViewGroup container, int position, Object view) {
+        container.removeView((View) view);
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return ModelObject.values().length;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return false;
+        return view == object;
     }
 
+
+
+
+    //voncvor avelorda
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        ModelObject customPagerEnum = ModelObject.values()[position];
+        return context.getString(customPagerEnum.getTitleId());
     }
 }

@@ -9,4 +9,7 @@
         <item>Saturday</item>
         <item>Sunday</item>
     </string-array>
+    <string name="red" />
+    <string name="blue" />
+    <string name="green" />
 </resources>
