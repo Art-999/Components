@@ -25,15 +25,15 @@ public class CustomImageAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view==object;
+        return view == object;
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
-        ImageView imageView=new ImageView(context);
+        ImageView imageView = new ImageView(context);
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         imageView.setImageResource(imagesIdArray[position]);
-        container.addView(imageView,0);
+        container.addView(imageView, 0);
         return imageView;
     }
 
