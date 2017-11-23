@@ -19,6 +19,6 @@ public class Pager extends AppCompatActivity {
        // pager.setAdapter(new CustomPagerAdapter(this));
        // pager.setAdapter(new CustomImageAdapter(this));
 
-        pager.setAdapter(new FarmePagerAdapter(getSupportFragmentManager()));
+        pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()));
     }
 }
